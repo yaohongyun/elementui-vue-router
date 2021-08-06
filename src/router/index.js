@@ -38,7 +38,6 @@ const mainRoutes = {
   ],
   beforeEnter(to, from, next){
     let token = Vue.cookie.get('token')
-    // console.log(!/\S/.test(token), 'token')
     if (!token || !/\S/.test(token)){
       clearLoginInfo()
       next({ name: 'login' })
@@ -79,7 +78,6 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(to, from, next)
   // 添加动态(菜单)路由
   // 1. 已经添加 or 全局路由, 直接访问
   // 2. 获取菜单列表, 添加并保存本地存储
@@ -168,7 +166,7 @@ function fnAddDynamicMenuRoutes (menuList = [], routes = []) {
     sessionStorage.setItem('dynamicMenuRoutes', JSON.stringify(mainRoutes.children || '[]'))
     // console.log('\n')
     // console.log('%c!<-------------------- 动态(菜单)路由 s -------------------->', 'color:blue')
-    // console.log(mainRoutes.children)
+    console.log(mainRoutes.children)
     // console.log('%c!<-------------------- 动态(菜单)路由 e -------------------->', 'color:blue')
   }
 }

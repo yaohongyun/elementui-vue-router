@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  color: #303133;
+  background-color: #fff;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Utils
+------------------------------ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* Reset element-ui
+------------------------------ */
+.site-wrapper .el-pagination {
+  margin-top: 15px;
+  text-align: right;
+}
+/* Layout
+------------------------------ */
+.site-wrapper {
+  position: relative;
+  min-width: 1180px;
+}
+/* Sidebar
+------------------------------ */
+.site-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1020;
+  width: 230px;
+  overflow: hidden;
+}
+
+/* sideContent
+----------------------------- */
+.site-content__wrapper {
+  position: relative;
+  margin-left: 230px;
+  min-height: 100%;
+  background: #f1f4f5;
+}
+.site-content {
+  position: relative;
+  padding: 15px;
+}
